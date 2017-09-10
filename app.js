@@ -6,21 +6,18 @@ const nav = [{
     link: '/',
     text: 'Home'
   },{
-    link: '/books',
-    text: 'Books'
-  }, {
-    link: '/authors',
-    text: 'Authors'
+    link: '/cards',
+    text: 'Cards'
   }
 ];
 
-const bookRouter  = require('./src/routes/bookRouter')(nav);
+const cardRouter  = require('./src/routes/cardRouter')(nav);
 
 app.use(express.static('public'));
 app.set('views','./src/views');
 app.set('view engine', 'pug');
 
-app.use('/books', bookRouter);
+app.use('/cards', cardRouter);
 
 app.get('/', function(req, res) {
   res.render('index', {

@@ -6,9 +6,8 @@ head
   link(rel="stylesheet", href="static/css/styles.css")
 body
   h1 Node JS app
-  p.desc Sub Heading
   p= title
-  ul
+  ul.nav
     each val in nav
       li
         a(href= val.link)= val.text

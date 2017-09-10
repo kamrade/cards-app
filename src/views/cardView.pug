@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  title Node JS app
+  link(rel="stylesheet", href="../static/css/styles.css")
+body
+  .card-view
+    h1 Cards
+    ul.nav
+      each val in nav
+        li
+          a(href= val.link)= val.text
+
+    .card
+      p= card.firstName
+      p= card.lastName
+      p= card.phone
+      p= card.company
+      p= card.email
+      p= card.personalID
+      p= card.cardCreated
+      p= card.cardID
+      p= card.cardNumber
+      p= card.status
+      p= card.curr
+      p= card.expDate
+      p= card.type
+      p= card.limitTotal
+      p= card.limitLeft
+    
+      p <b>Address:</b> #{card.country}, #{card.city}, #{card.postalCode}
+      p #{card.street}, #{card.building}, #{card.appartment}
+      p <b>Postal Address:</b> #{card.postalCity}, #{card.postalPostalCode}, #{card.postalStreet}
+      p #{card.postalBuilding}, #{card.postalAppartment}, #{card.postalCountry}
