@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  title Node JS app
+  link(rel="stylesheet", href="../static/css/styles.css")
+body
+  h1 Node JS app
+  p.desc Sub Heading
+  ul
+    each val in nav
+      li
+        a(href= val.link)= val.text
+
+  .book
+    p= book.title
+    p= book.author
+    p= book.genre
