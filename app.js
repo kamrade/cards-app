@@ -14,7 +14,7 @@ const nav = [{
   }
 ];
 
-const bookRouter  = require('./src/routes/bookRouter');
+const bookRouter  = require('./src/routes/bookRouter')(nav);
 
 app.use(express.static('public'));
 app.set('views','./src/views');
