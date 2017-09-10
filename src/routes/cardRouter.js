@@ -1,14 +1,25 @@
 const express    = require('express');
 const cardRouter = express.Router();
-let   cards      = require('./cards');
+const mongodb     = require('mongodb').MongoClient;
+// let   cards      = require('./cards');
+
 
 let router = function(nav) {
 
   cardRouter.route('/')
     .get(function(req, res) {
-      res.render('cardListView', {
-        nav: nav,
-        cards: cards
+      let url = 'mongodb://localhost:27017/cardsApp';
+      mongodb.connect(url, function(err, db) {
+        let collection = db.collection('cards')
+      
+        collection.find({}).toArray(function(err, results) {
+            res.render('cardListView', {
+              nav: nav,
+              cards: results
+            });
+        });
+
+        // db.close();
       });
     });
 
