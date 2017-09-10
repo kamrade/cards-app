@@ -12,12 +12,14 @@ const nav = [{
 ];
 
 const cardRouter  = require('./src/routes/cardRouter')(nav);
+const adminRouter  = require('./src/routes/adminRouter')(nav);
 
 app.use(express.static('public'));
 app.set('views','./src/views');
 app.set('view engine', 'pug');
 
 app.use('/cards', cardRouter);
+app.use('/admin', adminRouter);
 
 app.get('/', function(req, res) {
   res.render('index', {

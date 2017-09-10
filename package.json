@@ -1,7 +1,7 @@
 {
-  "name": "node-server",
+  "name": "cards-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "cards app based on node express",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.15.4",
+    "mongodb": "^2.2.31",
     "pug": "^2.0.0-rc.4"
   }
 }
