@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-html(lang="en")
-head
-  meta(charset="UTF-8")
-  title Node JS app
-  link(rel="stylesheet", href="static/css/styles.css")
-body
+extend layout
+block content
   .block-container
     h1.title= title
     ul.nav
@@ -14,18 +9,23 @@ body
     //- auth
     .auth-container.clearfix
       div.form-cont.sign-up
-        h3 SignIn
+        h3.auth-title SignIn
       div.form-cont.sign-in
-        h3 SignUp
-        form(
+        h3.auth-title SignUp
+        
+        form.form(
           name="SignUpForm",
           action="/auth/signUp",
           method="post" )
+          .form-group
+            label(for="userName") User Name
           .form-group
             input.form-control#userName(
               name="userName",
               type="text",
               autocomplete="off")
+          .form-group
+            label(for="password") Password
           .form-group
             input.form-control#password(
               name="password",

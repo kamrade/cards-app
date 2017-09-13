@@ -29,11 +29,11 @@ p {
   list-style:  none;
   display:  flex;
   flex-wrap:  wrap;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .nav li {
-  padding: 1rem 3rem 2rem 0;
+  padding: 1rem 2rem 1rem 0;
 
 }
 
@@ -57,11 +57,17 @@ p {
   margin-bottom: 0.25rem;
 }
 
+.form-group label {
+  font-size: 12px;
+  padding-left: 0.25rem;
+}
+
 .form-control {
   border-radius: 16px;
   border: none;
   background: #f1f3f8;
   padding: 0.25rem 1rem;
+  font-family: 'Consolas';
 }
 
 .form-control:active, .form-control:focus {
@@ -69,7 +75,7 @@ p {
   background: #504eff;
   color: white;
   outline: none;
-  font-family: 'Consolas';
+  padding: 0.25rem 1rem;
 }
 
 .btn {
@@ -89,8 +95,14 @@ p {
   font-family: 'Consolas'; 
 }
 
-.card-view {
-  p {
-    margin-bottom: 0;
-  }
+.card-view p {
+  margin-bottom: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+.auth-title {
+  margin-bottom: 0.5rem;
 }
