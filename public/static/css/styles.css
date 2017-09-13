@@ -1,5 +1,5 @@
 body {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Consolas', 'Helvetica', sans-serif;
 }
 
 p {
@@ -29,4 +29,56 @@ p {
 .nav li {
   padding: 1rem 3rem 2rem 0;
 
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.form-cont {
+  float: left;
+  padding-right: 2rem;
+}
+
+.auth-container h3 {
+  font-weight: normal;
+  color: #92979A;
+}
+
+.form-group {
+  margin-bottom: 0.25rem;
+}
+
+.form-control {
+  border-radius: 16px;
+  border: none;
+  background: #f1f3f8;
+  padding: 0.25rem 1rem;
+}
+
+.form-control:active, .form-control:focus {
+  border: none;
+  background: #504eff;
+  color: white;
+  outline: none;
+  font-family: 'Consolas';
+}
+
+.btn {
+  border-radius: 16px;
+  border: none;
+  background-color: #504eff;
+  color: white;
+  font-family: 'Consolas';
+  padding: 0.25rem 1rem;
+}
+
+.btn:active, .btn:focus {
+  border: none;
+  background: #403eef;
+  color: white;
+  outline: none;
+  font-family: 'Consolas'; 
 }
