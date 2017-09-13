@@ -5,31 +5,31 @@ head
   title Node JS app
   link(rel="stylesheet", href="static/css/styles.css")
 body
-  h1 Node JS app
-  p= title
-  
-  //- auth
-  .auth-container.clearfix
-    div.form-cont.sign-up
-      h3 SignIn
-    div.form-cont.sign-in
-      h3 SignUp
-      form(
-        name="SignUpForm",
-        action="/auth/signUp",
-        method="post" )
-        .form-group
-          input.form-control#userName(
-            name="userName",
-            type="text")
-        .form-group
-          input.form-control#password(
-            name="password",
-            type="text")
-        .form-group
-          input.btn(value="Sign Up", type="submit")
-
-  ul.nav
-    each val in nav
-      li
-        a(href= val.link)= val.text
+  .block-container
+    h1.title= title
+    ul.nav
+      each val in nav
+        li
+          a(href= val.link)= val.text
+    //- auth
+    .auth-container.clearfix
+      div.form-cont.sign-up
+        h3 SignIn
+      div.form-cont.sign-in
+        h3 SignUp
+        form(
+          name="SignUpForm",
+          action="/auth/signUp",
+          method="post" )
+          .form-group
+            input.form-control#userName(
+              name="userName",
+              type="text",
+              autocomplete="off")
+          .form-group
+            input.form-control#password(
+              name="password",
+              type="text",
+              autocomplete="off")
+          .form-group
+            input.btn(value="Sign Up", type="submit")

@@ -2,12 +2,18 @@ body {
   font-family: 'Consolas', 'Helvetica', sans-serif;
 }
 
-p {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
+.title {
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
-.card-view {
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+.block-container {
   padding: 1rem;
 }
 
@@ -81,4 +87,10 @@ p {
   color: white;
   outline: none;
   font-family: 'Consolas'; 
+}
+
+.card-view {
+  p {
+    margin-bottom: 0;
+  }
 }
