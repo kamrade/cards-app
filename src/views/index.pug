@@ -10,6 +10,29 @@ block content
     .auth-container.clearfix
       div.form-cont.sign-up
         h3.auth-title SignIn
+
+        form.form(
+          name="SignInForm",
+          action="/auth/signIn",
+          method="post" )
+          .form-group
+            label(for="userName") User Name
+          .form-group
+            input.form-control#userName(
+              name="userName",
+              type="text",
+              autocomplete="off")
+          .form-group
+            label(for="password") Password
+          .form-group
+            input.form-control#password(
+              name="password",
+              type="text",
+              autocomplete="off")
+          .form-group
+            input.btn(value="Sign In", type="submit")
+
+
       div.form-cont.sign-in
         h3.auth-title SignUp
         
