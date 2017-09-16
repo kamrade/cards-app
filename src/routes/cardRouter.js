@@ -5,6 +5,14 @@ const objectId    = require('mongodb').ObjectID;
 
 let router = function(nav) {
 
+
+  cardRouter.use(function(req, res, next) {
+    if(!req.user) {
+      res.redirect('/');
+    }
+    next();
+  });
+
   cardRouter.route('/')
     .get(function(req, res) {
       let url = 'mongodb://localhost:27017/cardsApp';
